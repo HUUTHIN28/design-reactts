@@ -1,0 +1,11 @@
+{
+    "plugins": {
+      "autoprefixer": {},
+      "cssnano": {},
+      "postcss-sorting": {},
+      "postcss-css-variables": {},
+      "css-mqpacker": {},
+      "postcss-custom-properties": {}
+      
+    }
+  }
