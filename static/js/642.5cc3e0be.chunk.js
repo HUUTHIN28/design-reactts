@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[642],{642:(e,n,t)=>{t.r(n),t.d(n,{default:()=>d});var s=t(791),r=t(184);const c=e=>{const[n,t]=(0,s.useState)(!0),c={open:n,toggle:t};return(0,r.jsx)(r.Fragment,{children:s.Children.map(e.children,(e=>s.cloneElement(e,c)))})},l=e=>{const{open:n}=e;return(0,r.jsx)("div",{children:n?"Button1":"Button2"})},u=()=>(0,r.jsx)("div",{children:"Input"}),d=e=>(0,r.jsxs)(c,{children:[(0,r.jsx)(l,{}),(0,r.jsx)(u,{}),(0,r.jsx)("div",{children:"huu thin"})]})}}]);
+//# sourceMappingURL=642.5cc3e0be.chunk.js.map
