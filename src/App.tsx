@@ -8,18 +8,18 @@ import LogIn from "./pages/auth/logIn";
 import { router } from "./common/router";
 function App() {
   return (
-    // <div>
-    //   <BrowserRouter basename="/">
-    //     <Routes>
-    //       <Route path="/" element={<Dashboard />}></Route>
-    //       <Route path="/mission" element={<Mission />}></Route>
-    //       <Route path="/log-in" element={<LogIn />}></Route>
-    //     </Routes>
-    //   </BrowserRouter>
-    // </div>
-    <Suspense fallback={<div>Loading...</div>}>
-      <RouterProvider router={router} />
-    </Suspense>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Dashboard />}></Route>
+          <Route path="/mission" element={<Mission />}></Route>
+          <Route path="/log-in" element={<LogIn />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+    // <Suspense fallback={<div>Loading...</div>}>
+    //   <RouterProvider router={router} />
+    // </Suspense>
   );
 }
 
