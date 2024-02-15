@@ -23,7 +23,7 @@ type props = {
   element: JSX.Element;
   index?: boolean;
   child?: props[];
-  loader?: (value: any) => void;
+  // loader?: (value: any) => void;
 };
 
 const listRouter = [
@@ -35,7 +35,7 @@ const listRouter = [
         path: "dashboard",
         element: <DashBoard />,
         index: true,
-        loader: getDashboard,
+        // loader: getDashboard,
       },
       {
         path: "",
@@ -45,7 +45,7 @@ const listRouter = [
             path: "list-blog",
             element: <ListBlog />,
             index: true,
-            loader: getMission,
+            // loader: getMission,
           },
           {
             path: "blog-detail",
@@ -72,16 +72,19 @@ const listRouter = [
 export const HandleRecursiveList = (data: props[]) => {
   return data.map((item: props) =>
     item.child ? (
-      <Route path={item.path} element={item.element}>
+      <Route
+        path={item.path}
+        element={item.element}
+        errorElement={<ErrorBoundary />}
+      >
         {" "}
         {HandleRecursiveList(item.child)}{" "}
       </Route>
     ) : (
       <Route
-        index
         path={item.path}
         element={item.element}
-        loader={item.loader}
+        // loader={item.loader}
         errorElement={<ErrorBoundary />}
       />
     )
@@ -91,7 +94,7 @@ export const HandleRecursiveList = (data: props[]) => {
 export const router = createBrowserRouter(
   createRoutesFromElements(HandleRecursiveList(listRouter))
 );
- 
+
 function ErrorBoundary() {
   let error = useRouteError();
   console.error(error);
