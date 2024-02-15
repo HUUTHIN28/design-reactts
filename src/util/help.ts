@@ -108,6 +108,7 @@ export function useUploadFile() {
 
             return accumulator;
           },
+
           Promise.resolve<File[]>([])
         );
 
